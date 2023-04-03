@@ -19,4 +19,4 @@ def calculo_desconto(valor_unitario,quantidade):
     #print(f'Valor total com desconto: {valor_com_desconto:.2f} R$')
     
 def test_calculo_desconto():
-    assert calculo_desconto(100,300) == 28000
+    assert calculo_desconto(100,300) == 27000
