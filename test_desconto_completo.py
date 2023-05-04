@@ -21,7 +21,7 @@ def cardapio(pedidos):
     print(cardapio)
 
     total = 0.0
-    codigos = pedidos.split() # split em python serve para quebrar valores 
+    codigos = [int(codigo) for codigo in pedidos.split()]  # split em python serve para quebrar valores 
     
     #codigo = int(input('Entre com o código desejado: '))
 
@@ -51,8 +51,8 @@ def cardapio(pedidos):
             print('Você pediu um Chá Gelado no valor de 4,00')
             total += 4.00
         else:
-            print('Opção inválida')
-            codigo = int(input('Entre com o código desejado: '))
+            #print('Opção inválida')
+            #codigo = int(input('Entre com o código desejado: '))
             continue
 
         print('Deseja pedir mais alguma coisa?')
@@ -72,17 +72,3 @@ def test_cardapio():
     assert cardapio('102 103 104') == 'O total a ser pago é: 38.00 R$'
     assert cardapio('100 105 200 201') == 'O total a ser pago é: 35.00 R$'
     assert cardapio('999 105 200') == 'O total a ser pago é: 22.00 R$'
-    
-    
-"""def test_cardapio_tudo_funcionando():
-    assert cardapio(100,2) == 'O total a ser pago é: 9.00 R$'
-    assert cardapio(105,2) == 'O total a ser pago é: 17.00 R$'
-"""   
-
-"""
-def test_cardapio_metade_funcionando():
-    assert cardapio(100,2) == 'O total a ser pago é: 8.00 R$'
-    assert cardapio(105,2) == 'O total a ser pago é: 17.00 R$'
-    
-"""
-
